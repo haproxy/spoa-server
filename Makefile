@@ -68,6 +68,7 @@ spoa: $(OBJS)
 	$(LD) $(LDFLAGS) -o $@ $^ $(LDLIBS)
 
 install: spoa
+	install -v -d $(DESTDIR)$(BINDIR)
 	install spoa $(DESTDIR)$(BINDIR)
 
 clean:
